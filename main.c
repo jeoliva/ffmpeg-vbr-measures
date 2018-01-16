@@ -1,6 +1,6 @@
 #include <libavformat/avformat.h>
 
-#define DEFAULT_BUFFER_LEN 2 * 1024 * 1024 // 2 MB
+#define DEFAULT_BUFDEFAULT_BUFFER_LENFER_LEN 2 * 1024 * 1024 // 2 MB
 
 #define MIN(a, b) (((a) < (b)) ? (a) : (b))
 #define MAX(a, b) (((a) > (b)) ? (a) : (b))
@@ -71,7 +71,7 @@ int main(int argc, char **argv)
   AVPacket pkt = { 0 };
 
   if (argc < 2) {
-    fprintf(stderr, "Usage: %s <video> [buffer len in kb]\n", argv[0]);
+    fprintf(stderr, "Usage: %s <video> [buffer size in KB]\n", argv[0]);
     exit(1);
   }
   src_filename = argv[1];
